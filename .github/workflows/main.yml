@@ -25,7 +25,7 @@ jobs:
         username: ${{ secrets.AWS_USERNAME }}
         key: ${{ secrets.AWS_PRIVATE_KEY }}
         source: "build/*"
-        target: /home/ubuntu/aws-hosting/build"
+        target: "/home/ubuntu/aws-hosting/build"
 
     - name: SSH into AWS and restart server
       uses: appleboy/ssh-action@master
