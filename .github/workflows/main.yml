@@ -18,6 +18,9 @@ jobs:
         npm install
         npm run build
 
+    - name: Set Permissions on build directory
+      run: chmod -R 755 build
+
     - name: Copy build to AWS
       uses: appleboy/scp-action@master
       with:
