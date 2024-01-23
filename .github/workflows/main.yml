@@ -18,6 +18,9 @@ jobs:
         npm install
         npm run build
 
+    - name: Check if build directory exists
+      run: '[ -d "/home/ubuntu/aws-hosting" ] || echo "Build directory does not exist"'
+
     - name: Set Permissions on build directory
       run: chmod -R 755 /home/ubuntu/aws-hosting/build
 
