@@ -18,12 +18,6 @@ jobs:
         npm install
         npm run build
 
-    - name: Check if build directory exists
-      run: '[ -d "/home/rtdl/MERN/aws-hosting/build" ] || echo "Build directory does not exist"'
-
-    - name: Set Permissions on build directory
-      run: chmod -R 755 /home/ubuntu/aws-hosting/build
-
     - name: Copy build to AWS
       uses: appleboy/scp-action@master
       with:
